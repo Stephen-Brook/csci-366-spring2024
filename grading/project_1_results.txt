@@ -298,10 +298,10 @@ Expected equality of these values:
 [  FAILED  ] lmsm_machine_suite.step_steps_to_the_next_instruction_and_executes_current (0 ms)
 [ RUN      ] lmsm_machine_suite.step_does_not_step_to_the_next_instruction_and_execute_if_machine_is_halted
 [       OK ] lmsm_machine_suite.step_does_not_step_to_the_next_instruction_and_execute_if_machine_is_halted (0 ms)
-[----------] 43 tests from lmsm_machine_suite (0 ms total)
+[----------] 43 tests from lmsm_machine_suite (1 ms total)
 
 [----------] Global test environment tear-down
-[==========] 43 tests from 1 test suite ran. (0 ms total)
+[==========] 43 tests from 1 test suite ran. (1 ms total)
 [  PASSED  ] 3 tests.
 [  FAILED  ] 40 tests, listed below:
 [  FAILED  ] lmsm_machine_suite.test_add_instruction_works

@@ -91,5 +91,5 @@ Running main() from /home/parallels/autograder/csci-366-spring2024/grading/scrip
 [----------] 43 tests from lmsm_machine_suite (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 43 tests from 1 test suite ran. (1 ms total)
+[==========] 43 tests from 1 test suite ran. (0 ms total)
 [  PASSED  ] 43 tests.

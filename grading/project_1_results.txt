@@ -3,346 +3,93 @@ Running main() from /home/parallels/autograder/csci-366-spring2024/grading/scrip
 [----------] Global test environment set-up.
 [----------] 43 tests from lmsm_machine_suite
 [ RUN      ] lmsm_machine_suite.test_add_instruction_works
-/home/parallels/autograder/csci-366-spring2024/grading/scripts/repos/stephen_brook/lmsm/test/lmsm.cpp:11: Failure
-Expected equality of these values:
-  the_machine->accumulator
-    Which is: 0
-  10
-[  FAILED  ] lmsm_machine_suite.test_add_instruction_works (0 ms)
+[       OK ] lmsm_machine_suite.test_add_instruction_works (0 ms)
 [ RUN      ] lmsm_machine_suite.test_add_instruction_properly_caps_values
-/home/parallels/autograder/csci-366-spring2024/grading/scripts/repos/stephen_brook/lmsm/test/lmsm.cpp:20: Failure
-Expected equality of these values:
-  the_machine->accumulator
-    Which is: 995
-  999
-[  FAILED  ] lmsm_machine_suite.test_add_instruction_properly_caps_values (0 ms)
+[       OK ] lmsm_machine_suite.test_add_instruction_properly_caps_values (0 ms)
 [ RUN      ] lmsm_machine_suite.test_sub_instruction_works
-/home/parallels/autograder/csci-366-spring2024/grading/scripts/repos/stephen_brook/lmsm/test/lmsm.cpp:29: Failure
-Expected equality of these values:
-  the_machine->accumulator
-    Which is: 20
-  10
-[  FAILED  ] lmsm_machine_suite.test_sub_instruction_works (0 ms)
+[       OK ] lmsm_machine_suite.test_sub_instruction_works (0 ms)
 [ RUN      ] lmsm_machine_suite.test_sub_instruction_properly_caps_values
-/home/parallels/autograder/csci-366-spring2024/grading/scripts/repos/stephen_brook/lmsm/test/lmsm.cpp:38: Failure
-Expected equality of these values:
-  the_machine->accumulator
-    Which is: -995
-  -999
-[  FAILED  ] lmsm_machine_suite.test_sub_instruction_properly_caps_values (0 ms)
+[       OK ] lmsm_machine_suite.test_sub_instruction_properly_caps_values (0 ms)
 [ RUN      ] lmsm_machine_suite.test_store_instruction_works
-/home/parallels/autograder/csci-366-spring2024/grading/scripts/repos/stephen_brook/lmsm/test/lmsm.cpp:46: Failure
-Expected equality of these values:
-  the_machine->memory[0]
-    Which is: 0
-  10
-[  FAILED  ] lmsm_machine_suite.test_store_instruction_works (0 ms)
+[       OK ] lmsm_machine_suite.test_store_instruction_works (0 ms)
 [ RUN      ] lmsm_machine_suite.test_load_instruction_works
-/home/parallels/autograder/csci-366-spring2024/grading/scripts/repos/stephen_brook/lmsm/test/lmsm.cpp:55: Failure
-Expected equality of these values:
-  the_machine->accumulator
-    Which is: 0
-  10
-[  FAILED  ] lmsm_machine_suite.test_load_instruction_works (0 ms)
+[       OK ] lmsm_machine_suite.test_load_instruction_works (0 ms)
 [ RUN      ] lmsm_machine_suite.test_branch_instruction_works
-/home/parallels/autograder/csci-366-spring2024/grading/scripts/repos/stephen_brook/lmsm/test/lmsm.cpp:63: Failure
-Expected equality of these values:
-  the_machine->program_counter
-    Which is: 0
-  20
-[  FAILED  ] lmsm_machine_suite.test_branch_instruction_works (0 ms)
+[       OK ] lmsm_machine_suite.test_branch_instruction_works (0 ms)
 [ RUN      ] lmsm_machine_suite.test_branch_if_zero_instruction_works_when_val_zero
-/home/parallels/autograder/csci-366-spring2024/grading/scripts/repos/stephen_brook/lmsm/test/lmsm.cpp:72: Failure
-Expected equality of these values:
-  the_machine->program_counter
-    Which is: 0
-  20
-[  FAILED  ] lmsm_machine_suite.test_branch_if_zero_instruction_works_when_val_zero (0 ms)
+[       OK ] lmsm_machine_suite.test_branch_if_zero_instruction_works_when_val_zero (0 ms)
 [ RUN      ] lmsm_machine_suite.test_branch_if_zero_instruction_works_when_val_not_zero
 [       OK ] lmsm_machine_suite.test_branch_if_zero_instruction_works_when_val_not_zero (0 ms)
 [ RUN      ] lmsm_machine_suite.test_branch_if_positive_instruction_works_when_val_zero
-/home/parallels/autograder/csci-366-spring2024/grading/scripts/repos/stephen_brook/lmsm/test/lmsm.cpp:90: Failure
-Expected equality of these values:
-  the_machine->program_counter
-    Which is: 0
-  20
-[  FAILED  ] lmsm_machine_suite.test_branch_if_positive_instruction_works_when_val_zero (0 ms)
+[       OK ] lmsm_machine_suite.test_branch_if_positive_instruction_works_when_val_zero (0 ms)
 [ RUN      ] lmsm_machine_suite.test_branch_if_positive_instruction_works_when_val_positive
-/home/parallels/autograder/csci-366-spring2024/grading/scripts/repos/stephen_brook/lmsm/test/lmsm.cpp:99: Failure
-Expected equality of these values:
-  the_machine->program_counter
-    Which is: 0
-  20
-[  FAILED  ] lmsm_machine_suite.test_branch_if_positive_instruction_works_when_val_positive (0 ms)
+[       OK ] lmsm_machine_suite.test_branch_if_positive_instruction_works_when_val_positive (0 ms)
 [ RUN      ] lmsm_machine_suite.test_branch_if_positive_instruction_works_when_val_not_positive
 [       OK ] lmsm_machine_suite.test_branch_if_positive_instruction_works_when_val_not_positive (0 ms)
 [ RUN      ] lmsm_machine_suite.test_output_instruction
-/home/parallels/autograder/csci-366-spring2024/grading/scripts/repos/stephen_brook/lmsm/test/lmsm.cpp:117: Failure
-Expected equality of these values:
-  the_machine->output_buffer
-    Which is: ""
-  "10 10 "
-[  FAILED  ] lmsm_machine_suite.test_output_instruction (0 ms)
+[       OK ] lmsm_machine_suite.test_output_instruction (0 ms)
 [ RUN      ] lmsm_machine_suite.test_halt_instruction
-/home/parallels/autograder/csci-366-spring2024/grading/scripts/repos/stephen_brook/lmsm/test/lmsm.cpp:126: Failure
-Expected equality of these values:
-  the_machine->status
-    Which is: 2
-  machine_status::STATUS_HALTED
-    Which is: 1
-[  FAILED  ] lmsm_machine_suite.test_halt_instruction (0 ms)
+[       OK ] lmsm_machine_suite.test_halt_instruction (0 ms)
 [ RUN      ] lmsm_machine_suite.test_load_immediate_instruction
-/home/parallels/autograder/csci-366-spring2024/grading/scripts/repos/stephen_brook/lmsm/test/lmsm.cpp:134: Failure
-Expected equality of these values:
-  the_machine->accumulator
-    Which is: 0
-  99
-[  FAILED  ] lmsm_machine_suite.test_load_immediate_instruction (0 ms)
+[       OK ] lmsm_machine_suite.test_load_immediate_instruction (0 ms)
 [ RUN      ] lmsm_machine_suite.test_push_instruction
-/home/parallels/autograder/csci-366-spring2024/grading/scripts/repos/stephen_brook/lmsm/test/lmsm.cpp:143: Failure
-Expected equality of these values:
-  the_machine->memory[199]
-    Which is: 0
-  10
-[  FAILED  ] lmsm_machine_suite.test_push_instruction (0 ms)
+[       OK ] lmsm_machine_suite.test_push_instruction (0 ms)
 [ RUN      ] lmsm_machine_suite.test_pop_instruction_removes_top_of_stack
-/home/parallels/autograder/csci-366-spring2024/grading/scripts/repos/stephen_brook/lmsm/test/lmsm.cpp:153: Failure
-Expected equality of these values:
-  the_machine->memory[199]
-    Which is: 0
-  10
-[  FAILED  ] lmsm_machine_suite.test_pop_instruction_removes_top_of_stack (0 ms)
+[       OK ] lmsm_machine_suite.test_pop_instruction_removes_top_of_stack (0 ms)
 [ RUN      ] lmsm_machine_suite.test_pop_instruction_enters_error_state_if_nothing_to_pop
-/home/parallels/autograder/csci-366-spring2024/grading/scripts/repos/stephen_brook/lmsm/test/lmsm.cpp:170: Failure
-Expected equality of these values:
-  the_machine->error_code
-    Which is: 3
-  error_code::ERROR_BAD_STACK
-    Which is: 1
-[  FAILED  ] lmsm_machine_suite.test_pop_instruction_enters_error_state_if_nothing_to_pop (0 ms)
+[       OK ] lmsm_machine_suite.test_pop_instruction_enters_error_state_if_nothing_to_pop (0 ms)
 [ RUN      ] lmsm_machine_suite.test_dup_instruction_duplicates_top_of_stack
-/home/parallels/autograder/csci-366-spring2024/grading/scripts/repos/stephen_brook/lmsm/test/lmsm.cpp:179: Failure
-Expected equality of these values:
-  the_machine->memory[199]
-    Which is: 0
-  10
-[  FAILED  ] lmsm_machine_suite.test_dup_instruction_duplicates_top_of_stack (0 ms)
+[       OK ] lmsm_machine_suite.test_dup_instruction_duplicates_top_of_stack (0 ms)
 [ RUN      ] lmsm_machine_suite.test_drop_instruction_removes_top_of_stack
-/home/parallels/autograder/csci-366-spring2024/grading/scripts/repos/stephen_brook/lmsm/test/lmsm.cpp:191: Failure
-Expected equality of these values:
-  the_machine->memory[199]
-    Which is: 0
-  10
-[  FAILED  ] lmsm_machine_suite.test_drop_instruction_removes_top_of_stack (0 ms)
+[       OK ] lmsm_machine_suite.test_drop_instruction_removes_top_of_stack (0 ms)
 [ RUN      ] lmsm_machine_suite.test_drop_instruction_enters_error_state_if_nothing_to_pop
-/home/parallels/autograder/csci-366-spring2024/grading/scripts/repos/stephen_brook/lmsm/test/lmsm.cpp:208: Failure
-Expected equality of these values:
-  the_machine->error_code
-    Which is: 3
-  error_code::ERROR_BAD_STACK
-    Which is: 1
-[  FAILED  ] lmsm_machine_suite.test_drop_instruction_enters_error_state_if_nothing_to_pop (0 ms)
+[       OK ] lmsm_machine_suite.test_drop_instruction_enters_error_state_if_nothing_to_pop (0 ms)
 [ RUN      ] lmsm_machine_suite.test_swap_instruction_swaps_top_of_stack
-/home/parallels/autograder/csci-366-spring2024/grading/scripts/repos/stephen_brook/lmsm/test/lmsm.cpp:221: Failure
-Expected equality of these values:
-  the_machine->memory[199]
-    Which is: 0
-  10
-[  FAILED  ] lmsm_machine_suite.test_swap_instruction_swaps_top_of_stack (0 ms)
+[       OK ] lmsm_machine_suite.test_swap_instruction_swaps_top_of_stack (0 ms)
 [ RUN      ] lmsm_machine_suite.test_swap_instruction_enters_error_state_if_nothing_to_swap
-/home/parallels/autograder/csci-366-spring2024/grading/scripts/repos/stephen_brook/lmsm/test/lmsm.cpp:240: Failure
-Expected equality of these values:
-  the_machine->error_code
-    Which is: 3
-  error_code::ERROR_BAD_STACK
-    Which is: 1
-[  FAILED  ] lmsm_machine_suite.test_swap_instruction_enters_error_state_if_nothing_to_swap (0 ms)
+[       OK ] lmsm_machine_suite.test_swap_instruction_enters_error_state_if_nothing_to_swap (0 ms)
 [ RUN      ] lmsm_machine_suite.test_sadd_instruction_adds_the_values_on_the_stack
-/home/parallels/autograder/csci-366-spring2024/grading/scripts/repos/stephen_brook/lmsm/test/lmsm.cpp:252: Failure
-Expected equality of these values:
-  the_machine->memory[199]
-    Which is: 0
-  20
-[  FAILED  ] lmsm_machine_suite.test_sadd_instruction_adds_the_values_on_the_stack (0 ms)
+[       OK ] lmsm_machine_suite.test_sadd_instruction_adds_the_values_on_the_stack (0 ms)
 [ RUN      ] lmsm_machine_suite.test_sadd_instruction_properly_caps_values
-/home/parallels/autograder/csci-366-spring2024/grading/scripts/repos/stephen_brook/lmsm/test/lmsm.cpp:264: Failure
-Expected equality of these values:
-  the_machine->memory[199]
-    Which is: 0
-  999
-[  FAILED  ] lmsm_machine_suite.test_sadd_instruction_properly_caps_values (0 ms)
+[       OK ] lmsm_machine_suite.test_sadd_instruction_properly_caps_values (0 ms)
 [ RUN      ] lmsm_machine_suite.test_sadd_instruction_enters_error_state_if_not_enough_elts
-/home/parallels/autograder/csci-366-spring2024/grading/scripts/repos/stephen_brook/lmsm/test/lmsm.cpp:274: Failure
-Expected equality of these values:
-  the_machine->error_code
-    Which is: 3
-  error_code::ERROR_BAD_STACK
-    Which is: 1
-[  FAILED  ] lmsm_machine_suite.test_sadd_instruction_enters_error_state_if_not_enough_elts (0 ms)
+[       OK ] lmsm_machine_suite.test_sadd_instruction_enters_error_state_if_not_enough_elts (0 ms)
 [ RUN      ] lmsm_machine_suite.test_ssub_instruction_subtracts_the_values_on_the_stack
-/home/parallels/autograder/csci-366-spring2024/grading/scripts/repos/stephen_brook/lmsm/test/lmsm.cpp:286: Failure
-Expected equality of these values:
-  the_machine->stack_pointer
-    Which is: 200
-  199
-[  FAILED  ] lmsm_machine_suite.test_ssub_instruction_subtracts_the_values_on_the_stack (0 ms)
+[       OK ] lmsm_machine_suite.test_ssub_instruction_subtracts_the_values_on_the_stack (0 ms)
 [ RUN      ] lmsm_machine_suite.test_ssub_instruction_properly_caps_values
-/home/parallels/autograder/csci-366-spring2024/grading/scripts/repos/stephen_brook/lmsm/test/lmsm.cpp:298: Failure
-Expected equality of these values:
-  the_machine->memory[199]
-    Which is: 0
-  -999
-[  FAILED  ] lmsm_machine_suite.test_ssub_instruction_properly_caps_values (0 ms)
+[       OK ] lmsm_machine_suite.test_ssub_instruction_properly_caps_values (0 ms)
 [ RUN      ] lmsm_machine_suite.test_ssub_instruction_subtracts_the_values_on_the_stack_in_the_right_order
-/home/parallels/autograder/csci-366-spring2024/grading/scripts/repos/stephen_brook/lmsm/test/lmsm.cpp:311: Failure
-Expected equality of these values:
-  the_machine->memory[199]
-    Which is: 0
-  -10
-[  FAILED  ] lmsm_machine_suite.test_ssub_instruction_subtracts_the_values_on_the_stack_in_the_right_order (0 ms)
+[       OK ] lmsm_machine_suite.test_ssub_instruction_subtracts_the_values_on_the_stack_in_the_right_order (0 ms)
 [ RUN      ] lmsm_machine_suite.test_ssub_instruction_enters_error_state_if_not_enough_elts
-/home/parallels/autograder/csci-366-spring2024/grading/scripts/repos/stephen_brook/lmsm/test/lmsm.cpp:321: Failure
-Expected equality of these values:
-  the_machine->error_code
-    Which is: 3
-  error_code::ERROR_BAD_STACK
-    Which is: 1
-[  FAILED  ] lmsm_machine_suite.test_ssub_instruction_enters_error_state_if_not_enough_elts (0 ms)
+[       OK ] lmsm_machine_suite.test_ssub_instruction_enters_error_state_if_not_enough_elts (0 ms)
 [ RUN      ] lmsm_machine_suite.test_smax_instruction_sets_max_val_on_stack
-/home/parallels/autograder/csci-366-spring2024/grading/scripts/repos/stephen_brook/lmsm/test/lmsm.cpp:329: Failure
-Expected equality of these values:
-  the_machine->memory[199]
-    Which is: 0
-  10
-[  FAILED  ] lmsm_machine_suite.test_smax_instruction_sets_max_val_on_stack (0 ms)
+[       OK ] lmsm_machine_suite.test_smax_instruction_sets_max_val_on_stack (0 ms)
 [ RUN      ] lmsm_machine_suite.test_smax_instruction_enters_error_state_if_not_enough_elts
-/home/parallels/autograder/csci-366-spring2024/grading/scripts/repos/stephen_brook/lmsm/test/lmsm.cpp:346: Failure
-Expected equality of these values:
-  the_machine->error_code
-    Which is: 3
-  error_code::ERROR_BAD_STACK
-    Which is: 1
-[  FAILED  ] lmsm_machine_suite.test_smax_instruction_enters_error_state_if_not_enough_elts (0 ms)
+[       OK ] lmsm_machine_suite.test_smax_instruction_enters_error_state_if_not_enough_elts (0 ms)
 [ RUN      ] lmsm_machine_suite.test_smin_instruction_sets_min_val_on_stack
-/home/parallels/autograder/csci-366-spring2024/grading/scripts/repos/stephen_brook/lmsm/test/lmsm.cpp:354: Failure
-Expected equality of these values:
-  the_machine->memory[199]
-    Which is: 0
-  20
-[  FAILED  ] lmsm_machine_suite.test_smin_instruction_sets_min_val_on_stack (0 ms)
+[       OK ] lmsm_machine_suite.test_smin_instruction_sets_min_val_on_stack (0 ms)
 [ RUN      ] lmsm_machine_suite.test_smin_instruction_enters_error_state_if_not_enough_elts
-/home/parallels/autograder/csci-366-spring2024/grading/scripts/repos/stephen_brook/lmsm/test/lmsm.cpp:371: Failure
-Expected equality of these values:
-  the_machine->error_code
-    Which is: 3
-  error_code::ERROR_BAD_STACK
-    Which is: 1
-[  FAILED  ] lmsm_machine_suite.test_smin_instruction_enters_error_state_if_not_enough_elts (0 ms)
+[       OK ] lmsm_machine_suite.test_smin_instruction_enters_error_state_if_not_enough_elts (0 ms)
 [ RUN      ] lmsm_machine_suite.test_smul_instruction_multiplies_the_values_on_the_stack
-/home/parallels/autograder/csci-366-spring2024/grading/scripts/repos/stephen_brook/lmsm/test/lmsm.cpp:382: Failure
-Expected equality of these values:
-  the_machine->memory[199]
-    Which is: 0
-  100
-[  FAILED  ] lmsm_machine_suite.test_smul_instruction_multiplies_the_values_on_the_stack (0 ms)
+[       OK ] lmsm_machine_suite.test_smul_instruction_multiplies_the_values_on_the_stack (0 ms)
 [ RUN      ] lmsm_machine_suite.test_smul_instruction_properly_caps_values
-/home/parallels/autograder/csci-366-spring2024/grading/scripts/repos/stephen_brook/lmsm/test/lmsm.cpp:394: Failure
-Expected equality of these values:
-  the_machine->memory[199]
-    Which is: 0
-  999
-[  FAILED  ] lmsm_machine_suite.test_smul_instruction_properly_caps_values (0 ms)
+[       OK ] lmsm_machine_suite.test_smul_instruction_properly_caps_values (0 ms)
 [ RUN      ] lmsm_machine_suite.test_smul_instruction_enters_error_state_if_not_enough_elts
-/home/parallels/autograder/csci-366-spring2024/grading/scripts/repos/stephen_brook/lmsm/test/lmsm.cpp:404: Failure
-Expected equality of these values:
-  the_machine->error_code
-    Which is: 3
-  error_code::ERROR_BAD_STACK
-    Which is: 1
-[  FAILED  ] lmsm_machine_suite.test_smul_instruction_enters_error_state_if_not_enough_elts (0 ms)
+[       OK ] lmsm_machine_suite.test_smul_instruction_enters_error_state_if_not_enough_elts (0 ms)
 [ RUN      ] lmsm_machine_suite.test_sdiv_instruction_divides_the_values_on_the_stack
-/home/parallels/autograder/csci-366-spring2024/grading/scripts/repos/stephen_brook/lmsm/test/lmsm.cpp:416: Failure
-Expected equality of these values:
-  the_machine->memory[199]
-    Which is: 0
-  2
-[  FAILED  ] lmsm_machine_suite.test_sdiv_instruction_divides_the_values_on_the_stack (0 ms)
+[       OK ] lmsm_machine_suite.test_sdiv_instruction_divides_the_values_on_the_stack (0 ms)
 [ RUN      ] lmsm_machine_suite.test_sdiv_instruction_enters_error_state_if_not_enough_elts
-/home/parallels/autograder/csci-366-spring2024/grading/scripts/repos/stephen_brook/lmsm/test/lmsm.cpp:426: Failure
-Expected equality of these values:
-  the_machine->error_code
-    Which is: 3
-  error_code::ERROR_BAD_STACK
-    Which is: 1
-[  FAILED  ] lmsm_machine_suite.test_sdiv_instruction_enters_error_state_if_not_enough_elts (0 ms)
+[       OK ] lmsm_machine_suite.test_sdiv_instruction_enters_error_state_if_not_enough_elts (0 ms)
 [ RUN      ] lmsm_machine_suite.test_call_instruction_jumps_to_correct_location_and_consumes_top_of_stack
-/home/parallels/autograder/csci-366-spring2024/grading/scripts/repos/stephen_brook/lmsm/test/lmsm.cpp:438: Failure
-Expected equality of these values:
-  the_machine->stack_pointer
-    Which is: 200
-  199
-[  FAILED  ] lmsm_machine_suite.test_call_instruction_jumps_to_correct_location_and_consumes_top_of_stack (0 ms)
+[       OK ] lmsm_machine_suite.test_call_instruction_jumps_to_correct_location_and_consumes_top_of_stack (0 ms)
 [ RUN      ] lmsm_machine_suite.return_set_program_counter_to_return_address_and_restores_return_address
-/home/parallels/autograder/csci-366-spring2024/grading/scripts/repos/stephen_brook/lmsm/test/lmsm.cpp:466: Failure
-Expected equality of these values:
-  the_machine->program_counter
-    Which is: 50
-  2
-[  FAILED  ] lmsm_machine_suite.return_set_program_counter_to_return_address_and_restores_return_address (0 ms)
+[       OK ] lmsm_machine_suite.return_set_program_counter_to_return_address_and_restores_return_address (0 ms)
 [ RUN      ] lmsm_machine_suite.step_steps_to_the_next_instruction_and_executes_current
-/home/parallels/autograder/csci-366-spring2024/grading/scripts/repos/stephen_brook/lmsm/test/lmsm.cpp:489: Failure
-Expected equality of these values:
-  the_machine->output_buffer
-    Which is: ""
-  "10 "
-[  FAILED  ] lmsm_machine_suite.step_steps_to_the_next_instruction_and_executes_current (0 ms)
+[       OK ] lmsm_machine_suite.step_steps_to_the_next_instruction_and_executes_current (0 ms)
 [ RUN      ] lmsm_machine_suite.step_does_not_step_to_the_next_instruction_and_execute_if_machine_is_halted
 [       OK ] lmsm_machine_suite.step_does_not_step_to_the_next_instruction_and_execute_if_machine_is_halted (0 ms)
-[----------] 43 tests from lmsm_machine_suite (1 ms total)
+[----------] 43 tests from lmsm_machine_suite (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 43 tests from 1 test suite ran. (1 ms total)
-[  PASSED  ] 3 tests.
-[  FAILED  ] 40 tests, listed below:
-[  FAILED  ] lmsm_machine_suite.test_add_instruction_works
-[  FAILED  ] lmsm_machine_suite.test_add_instruction_properly_caps_values
-[  FAILED  ] lmsm_machine_suite.test_sub_instruction_works
-[  FAILED  ] lmsm_machine_suite.test_sub_instruction_properly_caps_values
-[  FAILED  ] lmsm_machine_suite.test_store_instruction_works
-[  FAILED  ] lmsm_machine_suite.test_load_instruction_works
-[  FAILED  ] lmsm_machine_suite.test_branch_instruction_works
-[  FAILED  ] lmsm_machine_suite.test_branch_if_zero_instruction_works_when_val_zero
-[  FAILED  ] lmsm_machine_suite.test_branch_if_positive_instruction_works_when_val_zero
-[  FAILED  ] lmsm_machine_suite.test_branch_if_positive_instruction_works_when_val_positive
-[  FAILED  ] lmsm_machine_suite.test_output_instruction
-[  FAILED  ] lmsm_machine_suite.test_halt_instruction
-[  FAILED  ] lmsm_machine_suite.test_load_immediate_instruction
-[  FAILED  ] lmsm_machine_suite.test_push_instruction
-[  FAILED  ] lmsm_machine_suite.test_pop_instruction_removes_top_of_stack
-[  FAILED  ] lmsm_machine_suite.test_pop_instruction_enters_error_state_if_nothing_to_pop
-[  FAILED  ] lmsm_machine_suite.test_dup_instruction_duplicates_top_of_stack
-[  FAILED  ] lmsm_machine_suite.test_drop_instruction_removes_top_of_stack
-[  FAILED  ] lmsm_machine_suite.test_drop_instruction_enters_error_state_if_nothing_to_pop
-[  FAILED  ] lmsm_machine_suite.test_swap_instruction_swaps_top_of_stack
-[  FAILED  ] lmsm_machine_suite.test_swap_instruction_enters_error_state_if_nothing_to_swap
-[  FAILED  ] lmsm_machine_suite.test_sadd_instruction_adds_the_values_on_the_stack
-[  FAILED  ] lmsm_machine_suite.test_sadd_instruction_properly_caps_values
-[  FAILED  ] lmsm_machine_suite.test_sadd_instruction_enters_error_state_if_not_enough_elts
-[  FAILED  ] lmsm_machine_suite.test_ssub_instruction_subtracts_the_values_on_the_stack
-[  FAILED  ] lmsm_machine_suite.test_ssub_instruction_properly_caps_values
-[  FAILED  ] lmsm_machine_suite.test_ssub_instruction_subtracts_the_values_on_the_stack_in_the_right_order
-[  FAILED  ] lmsm_machine_suite.test_ssub_instruction_enters_error_state_if_not_enough_elts
-[  FAILED  ] lmsm_machine_suite.test_smax_instruction_sets_max_val_on_stack
-[  FAILED  ] lmsm_machine_suite.test_smax_instruction_enters_error_state_if_not_enough_elts
-[  FAILED  ] lmsm_machine_suite.test_smin_instruction_sets_min_val_on_stack
-[  FAILED  ] lmsm_machine_suite.test_smin_instruction_enters_error_state_if_not_enough_elts
-[  FAILED  ] lmsm_machine_suite.test_smul_instruction_multiplies_the_values_on_the_stack
-[  FAILED  ] lmsm_machine_suite.test_smul_instruction_properly_caps_values
-[  FAILED  ] lmsm_machine_suite.test_smul_instruction_enters_error_state_if_not_enough_elts
-[  FAILED  ] lmsm_machine_suite.test_sdiv_instruction_divides_the_values_on_the_stack
-[  FAILED  ] lmsm_machine_suite.test_sdiv_instruction_enters_error_state_if_not_enough_elts
-[  FAILED  ] lmsm_machine_suite.test_call_instruction_jumps_to_correct_location_and_consumes_top_of_stack
-[  FAILED  ] lmsm_machine_suite.return_set_program_counter_to_return_address_and_restores_return_address
-[  FAILED  ] lmsm_machine_suite.step_steps_to_the_next_instruction_and_executes_current
-
-40 FAILED TESTS
+[==========] 43 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 43 tests.

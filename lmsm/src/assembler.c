@@ -1,4 +1,4 @@
-//4/17
+//   4/19/24
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -49,18 +49,18 @@ asm_instruction * asm_make_instruction(char* type, char *label, char *label_refe
         new_instruction->offset = 0;
     }
 
-
-    // TODO: set the number of slots for the instruction into the slots field
+    //spushi takes two slots
     if(strcmp(type, "SPUSHI") == 0){
         new_instruction->slots = 2;
     }
+    //call takes three slots
     else if(strcmp(type, "CALL") == 0){
         new_instruction->slots = 3;
     }
+    //all other instructions take one slot
     else{
         new_instruction->slots = 1;
     }
-
     return new_instruction;
 }
 
@@ -120,14 +120,16 @@ int asm_is_num(char * token){
 }
 
 int asm_find_label(asm_instruction *root, char *label) {
-    // TODO - scan the linked list for the given label, return -1 if not found
     asm_instruction *currentInstruction = root;
+    //loop through the linked list
     while (currentInstruction != NULL) {
+        //find and return the correcrt label
         if (currentInstruction->label != NULL && strcmp(currentInstruction->label, label) == 0) {
             return currentInstruction->offset;
         }
         currentInstruction = currentInstruction->next;
     }
+    //if the label doesn't exist, return -1
     return -1;
 }
 
@@ -142,27 +144,28 @@ void asm_parse_src(asm_compilation_result * result, char * original_src){
     strcat(src, original_src);
     asm_instruction * last_instruction = NULL;
     asm_instruction * current_instruction = NULL;
-    //
+
     char *current_str = strtok(src, " \n");
     while(current_str != NULL){
         char *type = NULL;
         char *label = NULL;
         char *label_reference = NULL;
         int value = 0;
-
+        //if current_str is a label
         if (current_str != NULL && !asm_is_instruction(current_str) && !asm_is_num(current_str)){
             label = current_str;
             current_str = strtok(NULL, " \n");
         }
-
-        // Check if the next string is an instruction
+        //if current_str is an instruction
         if (current_str != NULL && asm_is_instruction(current_str) &&!asm_is_num(current_str)){
             type = current_str;
             current_str = strtok(NULL, " \n");
+            //if the instruction requires an argument but one is not provided, throw an error
             if(current_str == NULL && asm_instruction_requires_arg(type)){
                 result -> error = ASM_ERROR_ARG_REQUIRED;
                 break;
             }
+            //if the instruction requires an argument and a number is provided
             if(current_str != NULL && asm_instruction_requires_arg(type)){
                 if(asm_is_num(current_str)){
                     value = atoi(current_str);
@@ -172,12 +175,14 @@ void asm_parse_src(asm_compilation_result * result, char * original_src){
                     }
                     current_str = strtok(NULL, " \n");
                 }
+                //if the instruction requires an argument and a label_reference is provided
                 else if(current_str != NULL && !asm_is_num(current_str)){
                     label_reference = current_str;
                     current_str = strtok(NULL, " \n");
                 }
             }
         }
+        //throw an error if the string isn't a label or an instruction
         else {
             result->error = ASM_ERROR_UNKNOWN_INSTRUCTION;
             break;
@@ -186,23 +191,15 @@ void asm_parse_src(asm_compilation_result * result, char * original_src){
         // Create and link the new instruction
         asm_instruction *instruction = asm_make_instruction(type, label, label_reference, value, last_instruction);
         if(last_instruction == NULL) {
-            result->root = instruction; // Set root if it's the first instruction
+            //set root if it's the first instruction
+            result->root = instruction;
         }
-        last_instruction = instruction; // Update the last_instruction pointer
+        //update the last_instruction pointer
+        last_instruction = instruction;
         if(asm_make_compilation_result()->root == NULL){
             asm_make_compilation_result()->root = instruction;
         }
     }
-    //TODO - generate a linked list of instructions and store the first into
-    //       the result->root
-    //
-    //       generate the following errors as appropriate:
-    //
-    //       ASM_ERROR_UNKNOWN_INSTRUCTION - when an unknown instruction is encountered
-    //       ASM_ERROR_ARG_REQUIRED        - when an instruction does not have a proper argument passed to it
-    //       ASM_ERROR_OUT_OF_RANGE        - when a number argument is out of range (-999 to 999)
-    //
-    //       store the error in result->error
 }
 
 //======================================================
@@ -210,19 +207,14 @@ void asm_parse_src(asm_compilation_result * result, char * original_src){
 //======================================================
 
 void asm_gen_code_for_instruction(asm_compilation_result  * result, asm_instruction *instruction) {
-    //TODO - generate the machine code for the given instruction
-    //
-    // note that some instructions will take up multiple slots
-    //
-    // note that if the instruction has a label reference rather than a raw number reference
-    // you will need to look it up with `asm_find_label` and, if the label does not exist,
-    // report the error as ASM_ERROR_BAD_LABEL
+    //check if the value is actually a label_reference
     if (instruction->label_reference != NULL) {
         int label_position = asm_find_label(result->root, instruction->label_reference);
         if (label_position == -1) {
             result->error = ASM_ERROR_BAD_LABEL;
             return;
         }
+        //if it is a label_reference, set value to the value of the label
         instruction->value = label_position;
     }
     if(strcmp("ADD", instruction->instruction) == 0) {

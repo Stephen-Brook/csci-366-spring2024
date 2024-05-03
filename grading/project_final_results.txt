@@ -194,8 +194,8 @@ Running main() from /home/parallels/autograder/csci-366-spring2024/grading/scrip
 [       OK ] lmsm_machine_suite.step_steps_to_the_next_instruction_and_executes_current (0 ms)
 [ RUN      ] lmsm_machine_suite.step_does_not_step_to_the_next_instruction_and_execute_if_machine_is_halted
 [       OK ] lmsm_machine_suite.step_does_not_step_to_the_next_instruction_and_execute_if_machine_is_halted (0 ms)
-[----------] 43 tests from lmsm_machine_suite (1 ms total)
+[----------] 43 tests from lmsm_machine_suite (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 90 tests from 5 test suites ran. (1 ms total)
+[==========] 90 tests from 5 test suites ran. (0 ms total)
 [  PASSED  ] 90 tests.
